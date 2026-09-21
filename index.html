@@ -7,13 +7,33 @@
   <title>Côr Meibion Goronwy | Anglesey Male Voice Choir</title>
 
   <meta name="description"
-        content="Côr Meibion Goronwy – côr meibion o Ynys Môn. Anglesey male voice choir, established in Benllech in 2016.">
+        content="Côr Meibion Goronwy – côr meibion o Ynys Môn. Anglesey male voice choir established in Benllech in 2016.">
 
-  <!-- Font Awesome icons -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
 
   <style>
+
+    /* ==================================================
+       COLOURS / GLOBAL
+       ================================================== */
+
+    :root {
+      --ink: #171717;
+      --charcoal: #202322;
+      --cream: #f4f0e7;
+      --paper: #fbf9f4;
+      --red: #9e2f32;
+      --red-dark: #762124;
+      --gold: #c6a765;
+      --grey: #6d6d68;
+      --line: rgba(23,23,23,.14);
+      --white: #ffffff;
+      --radius: 4px;
+      --max: 1160px;
+    }
 
     * {
       box-sizing: border-box;
@@ -25,457 +45,963 @@
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f3ee;
-      color: #222;
-      line-height: 1.6;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
     }
 
-
-    /* =========================
-       HERO
-       ========================= */
-
-    .hero {
-      min-height: 72vh;
-
-      background:
-        linear-gradient(rgba(0,0,0,.38), rgba(0,0,0,.60)),
-        url("choir.jpg") center/cover no-repeat;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      text-align: center;
-      color: white;
-
-      padding: 100px 20px 50px;
-
-      position: relative;
+    img {
+      max-width: 100%;
     }
 
-
-    .hero-inner {
-      max-width: 900px;
+    a {
+      color: inherit;
     }
 
-
-    .hero h1 {
-      font-size: clamp(3rem, 8vw, 6rem);
-      line-height: 1;
-      margin: 0 0 18px;
-      letter-spacing: 1px;
-      text-shadow: 0 3px 12px rgba(0,0,0,.4);
-    }
-
-
-    .hero p {
-      font-size: clamp(1.1rem, 3vw, 1.55rem);
-      margin: 0 0 28px;
-      text-shadow: 0 2px 8px rgba(0,0,0,.4);
-    }
-
-
-    /* =========================
-       SOCIAL ICONS AT TOP
-       ========================= */
-
-    .top-socials {
-      position: absolute;
-
-      top: 22px;
-      right: 24px;
-
-      display: flex;
-      gap: 11px;
-
-      z-index: 10;
-    }
-
-
-    .top-socials a {
-
-      width: 46px;
-      height: 46px;
-
-      border-radius: 50%;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      color: white;
-      text-decoration: none;
-
-      font-size: 1.35rem;
-
-      background: rgba(0,0,0,.46);
-
-      border: 1px solid rgba(255,255,255,.42);
-
-      backdrop-filter: blur(5px);
-
-      transition:
-        transform .2s,
-        background .2s;
-    }
-
-
-    .top-socials a:hover {
-      transform: translateY(-3px);
-      background: rgba(255,255,255,.22);
-    }
-
-
-    /* =========================
-       BUTTONS
-       ========================= */
-
-    .button {
-
-      display: inline-block;
-
-      padding: 13px 22px;
-
-      margin: 6px;
-
-      background: white;
-      color: #222;
-
-      text-decoration: none;
-
-      border-radius: 7px;
-
-      font-weight: bold;
-
-      transition: .2s;
-    }
-
-
-    .button:hover {
-      transform: translateY(-2px);
-      opacity: .9;
-    }
-
-
-    .button.dark {
-      background: #222;
-      color: white;
-    }
-
-
-    /* =========================
-       GENERAL CONTENT
-       ========================= */
-
-    section {
-
-      max-width: 900px;
-
+    .wrap {
+      width: min(var(--max), calc(100% - 48px));
       margin: auto;
-
-      padding: 65px 25px;
     }
 
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: .74rem;
+      font-weight: 700;
+      color: var(--red);
+      margin-bottom: 12px;
+    }
 
-    section h2 {
-
-      text-align: center;
-
-      font-size: 2rem;
-
+    h1,
+    h2,
+    h3 {
+      font-family: "Libre Caslon Display", Georgia, serif;
+      font-weight: 400;
+      line-height: 1.05;
       margin-top: 0;
-      margin-bottom: 35px;
     }
 
-
-    .welsh {
+    h2 {
+      font-size: clamp(2.4rem, 5vw, 4.3rem);
       margin-bottom: 28px;
     }
 
 
-    .english {
-      color: #555;
-    }
+    /* ==================================================
+       NAVIGATION
+       ================================================== */
 
-
-    .divider {
-
-      width: 70px;
-
-      border: 0;
-      border-top: 3px solid #222;
-
-      margin: 30px auto;
-    }
-
-
-    /* =========================
-       DARK FEATURE SECTIONS
-       ========================= */
-
-    .feature {
-
-      background: #222;
-
+    .topbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 20;
       color: white;
-
-      max-width: none;
+      border-bottom: 1px solid rgba(255,255,255,.22);
     }
 
-
-    .feature-inner {
-
-      max-width: 900px;
-
-      margin: auto;
-
-      text-align: center;
-    }
-
-
-    .feature .english {
-      color: #ddd;
-    }
-
-
-    /* =========================
-       EVENTS
-       ========================= */
-
-    .event {
-
-      background: white;
-
-      padding: 22px;
-
-      margin: 16px 0;
-
-      border-radius: 8px;
-
-      box-shadow:
-        0 2px 10px rgba(0,0,0,.06);
-    }
-
-
-    .event h3 {
-
-      margin-top: 0;
-
-      margin-bottom: 5px;
-    }
-
-
-    /* =========================
-       SOCIAL LINKS LOWER PAGE
-       ========================= */
-
-    .socials {
-
-      text-align: center;
-    }
-
-
-    .socials a {
-
+    .nav {
+      min-height: 88px;
       display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
 
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+
+    .monogram {
+      width: 45px;
+      height: 45px;
+      border: 1px solid rgba(255,255,255,.75);
+      border-radius: 50%;
+      display: flex;
       align-items: center;
       justify-content: center;
+      font-family: Georgia, serif;
+      letter-spacing: -.08em;
+      font-size: .95rem;
+    }
 
-      gap: 12px;
+    .brand-text {
+      line-height: 1.15;
+    }
 
-      max-width: 480px;
+    .brand-small {
+      display: block;
+      font-size: .67rem;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      opacity: .68;
+      margin-top: 4px;
+    }
 
-      margin: 12px auto;
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
 
-      padding: 16px;
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
 
-      background: #222;
-
-      color: white;
-
+    .nav-links a {
       text-decoration: none;
+      font-size: .87rem;
+      font-weight: 600;
+      opacity: .9;
+    }
 
-      border-radius: 8px;
-
-      font-weight: bold;
-
-      font-size: 1.05rem;
-
-      transition: .2s;
+    .nav-links a:hover {
+      opacity: 1;
     }
 
 
-    .socials a:hover {
+    /* ==================================================
+       SOCIAL ICONS
+       ================================================== */
 
-      opacity: .88;
+    .icon-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
+    .icon-link {
+      width: 37px;
+      height: 37px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255,255,255,.3);
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+      transition: .2s ease;
+    }
+
+    .icon-link:hover {
+      background: white;
+      color: var(--ink);
       transform: translateY(-2px);
     }
 
-
-    .socials i {
-
-      width: 25px;
-
-      font-size: 1.35rem;
+    .icon-link svg {
+      width: 17px;
+      height: 17px;
+      fill: currentColor;
     }
 
 
-    /* =========================
-       FOOTER
-       ========================= */
+    /* ==================================================
+       HERO
+       ================================================== */
 
-    footer {
+    .hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      align-items: flex-end;
+      color: white;
 
-      background: #111;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(10,12,11,.83) 0%,
+          rgba(10,12,11,.52) 48%,
+          rgba(10,12,11,.12) 100%
+        ),
+        linear-gradient(
+          0deg,
+          rgba(10,12,11,.6) 0%,
+          transparent 45%
+        ),
+        url("choir.jpg") center 36% / cover no-repeat;
+    }
 
-      color: #aaa;
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(
+        90deg,
+        var(--red) 0 45%,
+        var(--gold) 45% 55%,
+        var(--red) 55% 100%
+      );
+    }
 
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 190px 0 90px;
+      max-width: 850px;
+    }
+
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: .25em;
+      font-size: .76rem;
+      font-weight: 700;
+      color: #eee1c0;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(4rem, 9vw, 7.8rem);
+      max-width: 850px;
+      margin-bottom: 20px;
+      text-shadow: 0 3px 30px rgba(0,0,0,.25);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+      max-width: 700px;
+      color: rgba(255,255,255,.88);
+      margin-bottom: 34px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 24px;
+      text-decoration: none;
+      font-size: .9rem;
+      font-weight: 700;
+      letter-spacing: .02em;
+      border-radius: var(--radius);
+      transition: .2s ease;
+    }
+
+    .btn-primary {
+      background: var(--red);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--red-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      color: white;
+      border: 1px solid rgba(255,255,255,.6);
+      background: rgba(255,255,255,.05);
+      backdrop-filter: blur(5px);
+    }
+
+    .btn-ghost:hover {
+      background: white;
+      color: var(--ink);
+    }
+
+
+    /* ==================================================
+       QUICK FACTS
+       ================================================== */
+
+    .facts {
+      background: var(--cream);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .facts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .fact {
+      padding: 33px 28px;
       text-align: center;
+      border-right: 1px solid var(--line);
+    }
 
-      padding: 35px 20px;
+    .fact:last-child {
+      border-right: 0;
+    }
 
+    .fact strong {
+      display: block;
+      font-family: "Libre Caslon Display", Georgia, serif;
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1.1;
+    }
+
+    .fact span {
+      color: var(--grey);
+      font-size: .82rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+
+
+    /* ==================================================
+       ABOUT
+       ================================================== */
+
+    .about {
+      padding: 115px 0;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 58px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+    }
+
+    .language-block {
+      position: relative;
+    }
+
+    .language-label {
+      font-size: .73rem;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-weight: 700;
+      color: var(--red);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 13px;
+      margin-bottom: 25px;
+    }
+
+    .language-block p {
+      margin-top: 0;
+      margin-bottom: 18px;
+    }
+
+    .english {
+      color: #555650;
+    }
+
+
+    /* ==================================================
+       TEAM
+       ================================================== */
+
+    .team-section {
+      background: var(--charcoal);
+      color: white;
+      padding: 105px 0;
+    }
+
+    .team-section .eyebrow {
+      color: #dbc58e;
+    }
+
+    .team-heading {
+      max-width: 720px;
+      margin-bottom: 48px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .person-card {
+      position: relative;
+      min-height: 220px;
+      background: #292c2b;
+      border: 1px solid rgba(255,255,255,.1);
+      padding: 38px;
+      overflow: hidden;
+    }
+
+    .person-card::before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 4px;
+      left: 38px;
+      top: 0;
+      background: var(--gold);
+    }
+
+    .person-role {
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      font-size: .72rem;
+      color: #bfbfb9;
+      margin-bottom: 35px;
+    }
+
+    .person-card h3 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 10px;
+    }
+
+    .person-cy {
+      color: #ddd3bb;
       font-size: .9rem;
     }
 
 
-    footer a {
+    /* ==================================================
+       CONCERTS
+       ================================================== */
+
+    .concerts {
+      padding: 110px 0;
+      background: var(--paper);
+    }
+
+    .concert-top {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 45px;
+    }
+
+    .concert-top h2 {
+      margin-bottom: 0;
+    }
+
+    .event-card {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      background: white;
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 60px rgba(30,30,20,.06);
+    }
+
+    .event-date {
+      background: var(--red);
       color: white;
+      min-height: 230px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 28px;
+    }
+
+    .event-date svg {
+      width: 31px;
+      height: 31px;
+      margin-bottom: 17px;
+      fill: currentColor;
+    }
+
+    .event-date strong {
+      font-family: "Libre Caslon Display", Georgia, serif;
+      font-size: 2.1rem;
+      font-weight: 400;
+    }
+
+    .event-date span {
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      opacity: .8;
+    }
+
+    .event-content {
+      padding: 42px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .event-content h3 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .event-content p {
+      color: var(--grey);
+      margin: 0;
     }
 
 
-    /* =========================
-       MOBILE
-       ========================= */
+    /* ==================================================
+       JOIN
+       ================================================== */
 
-    @media (max-width: 600px) {
+    .join-section {
+      position: relative;
+      background: var(--cream);
+      padding: 110px 0;
+      overflow: hidden;
+    }
 
-      section {
-        padding: 48px 20px;
+    .join-section::before {
+      content: "CMG";
+      position: absolute;
+      font-family: "Libre Caslon Display", Georgia, serif;
+      font-size: 24rem;
+      line-height: 1;
+      color: rgba(158,47,50,.035);
+      right: -40px;
+      bottom: -85px;
+      pointer-events: none;
+    }
+
+    .join-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .join-copy p {
+      max-width: 650px;
+      font-size: 1.08rem;
+    }
+
+    .join-copy .english {
+      margin-bottom: 32px;
+    }
+
+    .rehearsal-card {
+      background: var(--ink);
+      color: white;
+      padding: 42px;
+      box-shadow: 0 24px 70px rgba(20,20,15,.12);
+    }
+
+    .rehearsal-small {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: .72rem;
+      font-weight: 700;
+    }
+
+    .rehearsal-card h3 {
+      font-size: 2.5rem;
+      margin: 13px 0 25px;
+    }
+
+    .rehearsal-detail {
+      border-top: 1px solid rgba(255,255,255,.15);
+      padding-top: 20px;
+      margin-top: 20px;
+      color: #d7d7d1;
+    }
+
+    .rehearsal-card .btn {
+      margin-top: 25px;
+      width: 100%;
+    }
+
+
+    /* ==================================================
+       FOLLOW
+       ================================================== */
+
+    .follow {
+      padding: 105px 0;
+      text-align: center;
+    }
+
+    .follow-heading {
+      max-width: 650px;
+      margin: 0 auto 45px;
+    }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .social-card {
+      min-height: 150px;
+      border: 1px solid var(--line);
+      background: white;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 13px;
+      transition: .2s ease;
+    }
+
+    .social-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--red);
+      box-shadow: 0 15px 45px rgba(20,20,15,.07);
+    }
+
+    .social-card svg {
+      width: 29px;
+      height: 29px;
+      fill: var(--red);
+    }
+
+    .social-card span {
+      font-weight: 700;
+      font-size: .9rem;
+    }
+
+
+    /* ==================================================
+       FOOTER
+       ================================================== */
+
+    footer {
+      background: #131414;
+      color: #aaa;
+      padding: 48px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .footer-title {
+      color: white;
+      font-family: "Libre Caslon Display", Georgia, serif;
+      font-size: 1.5rem;
+      margin-bottom: 4px;
+    }
+
+    .footer-place {
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+    }
+
+    .footer-email a {
+      color: white;
+      text-decoration: none;
+    }
+
+
+    /* ==================================================
+       RESPONSIVE
+       ================================================== */
+
+    @media (max-width: 900px) {
+
+      .nav-links {
+        display: none;
       }
 
+      .about-grid,
+      .join-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .concert-top {
+        display: block;
+      }
+
+    }
+
+
+    @media (max-width: 650px) {
+
+      body {
+        font-size: 16px;
+      }
+
+      .wrap {
+        width: min(var(--max), calc(100% - 30px));
+      }
+
+      .topbar {
+        background: rgba(10,10,10,.25);
+      }
+
+      .nav {
+        min-height: 76px;
+      }
+
+      .brand-text {
+        font-size: .86rem;
+      }
+
+      .brand-small {
+        display: none;
+      }
+
+      .nav-right {
+        gap: 5px;
+      }
+
+      .icon-link {
+        width: 34px;
+        height: 34px;
+      }
+
+      .icon-row .icon-link:nth-child(4) {
+        display: none;
+      }
 
       .hero {
-        min-height: 65vh;
-        padding-top: 105px;
+        min-height: 82vh;
+        background:
+          linear-gradient(
+            0deg,
+            rgba(10,12,11,.85) 0%,
+            rgba(10,12,11,.25) 75%
+          ),
+          url("choir.jpg") center / cover no-repeat;
       }
 
-
-      .top-socials {
-
-        top: 20px;
-
-        left: 50%;
-
-        right: auto;
-
-        transform: translateX(-50%);
+      .hero-content {
+        padding: 150px 0 65px;
       }
 
+      .hero h1 {
+        font-size: clamp(3.7rem, 17vw, 5.5rem);
+      }
 
-      .top-socials a {
+      .hero-subtitle {
+        font-size: 1.05rem;
+      }
 
-        width: 43px;
+      .facts-grid {
+        grid-template-columns: 1fr;
+      }
 
-        height: 43px;
+      .fact {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+        padding: 22px;
+      }
 
-        font-size: 1.25rem;
+      .fact:last-child {
+        border-bottom: 0;
+      }
+
+      .about,
+      .concerts,
+      .follow,
+      .join-section,
+      .team-section {
+        padding: 75px 0;
+      }
+
+      .about-grid {
+        gap: 35px;
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .person-card {
+        min-height: auto;
+      }
+
+      .event-card {
+        grid-template-columns: 1fr;
+      }
+
+      .event-date {
+        min-height: auto;
+        padding: 26px;
+      }
+
+      .event-content {
+        padding: 30px;
+      }
+
+      .social-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .social-card {
+        min-height: 125px;
+      }
+
+      .footer-inner {
+        display: block;
+        text-align: center;
+      }
+
+      .footer-email {
+        margin-top: 20px;
       }
 
     }
 
   </style>
-
 </head>
 
 
 <body>
 
 
-<!-- ====================================================
-     HERO
-     ==================================================== -->
+<!-- ==================================================
+     TOP NAVIGATION
+     ================================================== -->
 
-<header class="hero">
+<div class="topbar">
 
+  <div class="wrap nav">
 
-  <!-- SOCIAL ICONS -->
+    <a class="brand" href="#top">
 
-  <div class="top-socials">
+      <div class="monogram">
+        CMG
+      </div>
 
-    <a href="https://www.facebook.com/meibiongoronwy"
-       target="_blank"
-       rel="noopener"
-       aria-label="Facebook"
-       title="Facebook">
-
-      <i class="fa-brands fa-facebook-f"></i>
-
-    </a>
-
-
-    <a href="https://www.instagram.com/meibion_goronwy/"
-       target="_blank"
-       rel="noopener"
-       aria-label="Instagram"
-       title="Instagram">
-
-      <i class="fa-brands fa-instagram"></i>
+      <div class="brand-text">
+        Côr Meibion Goronwy
+        <span class="brand-small">
+          Ynys Môn · Anglesey
+        </span>
+      </div>
 
     </a>
 
 
-    <a href="https://www.tiktok.com/@meibion.goronwy"
-       target="_blank"
-       rel="noopener"
-       aria-label="TikTok"
-       title="TikTok">
+    <div class="nav-right">
 
-      <i class="fa-brands fa-tiktok"></i>
-
-    </a>
+      <nav class="nav-links">
+        <a href="#about">Amdanom</a>
+        <a href="#concerts">Cyngherddau</a>
+        <a href="#join">Ymunwch</a>
+      </nav>
 
 
-    <a href="mailto:meibiongoronwy@gmail.com"
-       aria-label="Email"
-       title="Email">
+      <div class="icon-row">
 
-      <i class="fa-solid fa-envelope"></i>
+        <!-- Facebook -->
+        <a class="icon-link"
+           href="https://www.facebook.com/meibiongoronwy"
+           target="_blank"
+           rel="noopener"
+           aria-label="Facebook">
 
-    </a>
+          <svg viewBox="0 0 24 24">
+            <path d="M13.5 22v-9h3l.5-3h-3.5V8.1c0-.9.3-1.6 1.7-1.6H17V3.8c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10H7v3h3v9h3.5z"/>
+          </svg>
+
+        </a>
+
+
+        <!-- Instagram -->
+        <a class="icon-link"
+           href="https://www.instagram.com/meibion_goronwy/"
+           target="_blank"
+           rel="noopener"
+           aria-label="Instagram">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm11 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
+          </svg>
+
+        </a>
+
+
+        <!-- TikTok -->
+        <a class="icon-link"
+           href="https://www.tiktok.com/@meibion.goronwy"
+           target="_blank"
+           rel="noopener"
+           aria-label="TikTok">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M14 3h3.2c.3 1.5 1.2 2.7 2.8 3.4v3.1c-1.3 0-2.5-.4-3.6-1.1v7.1a6.3 6.3 0 1 1-5.5-6.2v3.2a3.1 3.1 0 1 0 2 3V3H14z"/>
+          </svg>
+
+        </a>
+
+
+        <!-- Email -->
+        <a class="icon-link"
+           href="mailto:meibiongoronwy@gmail.com"
+           aria-label="Email">
+
+          <svg viewBox="0 0 24 24">
+            <path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm9 7L3.7 7h16.6L12 12zm0 2.3L3 8.8V17h18V8.8l-9 5.5z"/>
+          </svg>
+
+        </a>
+
+      </div>
+
+    </div>
 
   </div>
 
+</div>
 
 
-  <div class="hero-inner">
 
-    <h1>Côr Meibion Goronwy</h1>
+<!-- ==================================================
+     HERO
+     ================================================== -->
 
-    <p>
-      Côr Meibion Ynys Môn
-      <br>
-      Anglesey Male Voice Choir
-    </p>
+<header class="hero" id="top">
 
+  <div class="wrap">
 
-    <a class="button"
-       href="#about">
+    <div class="hero-content">
 
-       Amdanom Ni / About Us
+      <div class="hero-kicker">
+        Ynys Môn · Anglesey
+      </div>
 
-    </a>
+      <h1>
+        Côr Meibion<br>
+        Goronwy
+      </h1>
 
+      <div class="hero-subtitle">
+        Côr meibion o Ynys Môn · A male voice choir from the Isle of Anglesey
+      </div>
 
-    <a class="button"
-       href="#join">
+      <div class="hero-actions">
 
-       Ymunwch / Join Us
+        <a class="btn btn-primary" href="#concerts">
+          Cyngherddau / Concerts
+        </a>
 
-    </a>
+        <a class="btn btn-ghost" href="#join">
+          Ymunwch â Ni / Join Us
+        </a>
+
+      </div>
+
+    </div>
 
   </div>
 
@@ -483,63 +1009,116 @@
 
 
 
-<!-- ====================================================
+<!-- ==================================================
+     QUICK FACTS
+     ================================================== -->
+
+<section class="facts">
+
+  <div class="wrap facts-grid">
+
+    <div class="fact">
+      <strong>2016</strong>
+      <span>Sefydlwyd · Established</span>
+    </div>
+
+    <div class="fact">
+      <strong>Nos Iau</strong>
+      <span>Thursday · 7.30pm</span>
+    </div>
+
+    <div class="fact">
+      <strong>Benllech</strong>
+      <span>Ynys Môn · Anglesey</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
      ABOUT
-     ==================================================== -->
+     ================================================== -->
 
-<section id="about">
+<section class="about" id="about">
 
-  <h2>Amdanom Ni / About Us</h2>
+  <div class="wrap">
 
+    <div class="section-heading">
 
-  <div class="welsh">
+      <div class="eyebrow">
+        Ein Côr · Our Choir
+      </div>
 
-    <p>
-      Sefydlwyd Côr Meibion Goronwy ym mhentref Benllech yn 2016,
-      gyda'r bwriad o ail-greu diddordeb lleol ym myd y corau meibion.
-    </p>
+      <h2>
+        Traddodiad byw o ganu meibion.
+      </h2>
 
-
-    <p>
-      Ers hynny mae'r côr wedi perfformio ar lwyfannau ledled Gogledd
-      Cymru a thu hwnt, gan gynnwys ymweliadau ag Iwerddon,
-      yr Amwythig a Llundain.
-    </p>
+    </div>
 
 
-    <p>
-      Mae ein repertoire yn cynnwys caneuon traddodiadol Cymraeg a
-      Saesneg ynghyd â darnau mwy cyfoes, gydag unawdwyr,
-      deuawdau a thriawdau o blith aelodau'r côr.
-    </p>
-
-  </div>
+    <div class="about-grid">
 
 
-  <hr class="divider">
+      <!-- WELSH -->
+
+      <div class="language-block">
+
+        <div class="language-label">
+          Cymraeg
+        </div>
+
+        <p>
+          Sefydlwyd Côr Meibion Goronwy ym mhentref Benllech yn 2016,
+          gyda'r bwriad o ail-greu diddordeb lleol ym myd y corau meibion.
+        </p>
+
+        <p>
+          Ers hynny mae'r côr wedi perfformio ar lwyfannau ledled Gogledd
+          Cymru a thu hwnt, gan gynnwys ymweliadau ag Iwerddon,
+          yr Amwythig a Llundain.
+        </p>
+
+        <p>
+          Mae ein repertoire yn cynnwys caneuon traddodiadol Cymraeg a
+          Saesneg ynghyd â darnau mwy cyfoes, gydag unawdwyr,
+          deuawdau a thriawdau o blith aelodau'r côr.
+        </p>
+
+      </div>
 
 
-  <div class="english">
+      <!-- ENGLISH -->
 
-    <p>
-      Côr Meibion Goronwy was formed in the village of Benllech
-      in 2016 with the aim of renewing local interest in the
-      tradition of male voice singing.
-    </p>
+      <div class="language-block english">
 
+        <div class="language-label">
+          English
+        </div>
 
-    <p>
-      Since then the choir has performed throughout North Wales
-      and further afield, including visits to Ireland,
-      Shrewsbury and London.
-    </p>
+        <p>
+          Côr Meibion Goronwy was formed in the village of Benllech
+          in 2016 with the aim of renewing local interest in the
+          tradition of male voice singing.
+        </p>
 
+        <p>
+          Since then the choir has performed throughout North Wales
+          and further afield, including visits to Ireland,
+          Shrewsbury and London.
+        </p>
 
-    <p>
-      Our repertoire ranges from traditional Welsh and English
-      male voice music to more contemporary pieces, with
-      soloists, duets and trios drawn from within the choir.
-    </p>
+        <p>
+          Our repertoire ranges from traditional Welsh and English
+          male voice music to more contemporary pieces, with
+          soloists, duets and trios drawn from within the choir.
+        </p>
+
+      </div>
+
+    </div>
 
   </div>
 
@@ -547,87 +1126,63 @@
 
 
 
-<!-- ====================================================
+<!-- ==================================================
      MUSICAL TEAM
-     ==================================================== -->
+     ================================================== -->
 
-<section class="feature">
+<section class="team-section">
 
-  <div class="feature-inner">
+  <div class="wrap">
 
-    <h2>
-      Ein Tîm Cerddorol / Our Musical Team
-    </h2>
+    <div class="team-heading">
 
+      <div class="eyebrow">
+        Ein Tîm Cerddorol · Our Musical Team
+      </div>
 
-    <p>
+      <h2>
+        Y bobl tu ôl i'r gerddoriaeth.
+      </h2>
 
-      <strong>
-        Cyfarwyddwr Cerdd / Musical Director
-      </strong>
-
-      <br>
-
-      Dafydd Jones
-
-    </p>
+    </div>
 
 
-    <p>
+    <div class="team-grid">
 
-      <strong>
-        Cyfeilydd / Accompanist
-      </strong>
+      <div class="person-card">
 
-      <br>
+        <div class="person-role">
+          Musical Director
+        </div>
 
-      Rhian Lloyd Jones
+        <h3>
+          Dafydd Jones
+        </h3>
 
-    </p>
+        <div class="person-cy">
+          Cyfarwyddwr Cerdd
+        </div>
 
-  </div>
-
-</section>
-
-
-
-<!-- ====================================================
-     EVENTS
-     ==================================================== -->
-
-<section id="events">
-
-  <h2>
-    Cyngherddau / Concerts
-  </h2>
+      </div>
 
 
-  <!--
+      <div class="person-card">
 
-  TO ADD AN EVENT,
-  COPY THIS WHOLE <div class="event"> BLOCK
+        <div class="person-role">
+          Accompanist
+        </div>
 
-  -->
+        <h3>
+          Rhian Lloyd Jones
+        </h3>
 
+        <div class="person-cy">
+          Cyfeilydd
+        </div>
 
-  <div class="event">
+      </div>
 
-    <h3>
-      Cyngerdd nesaf / Next concert
-    </h3>
-
-
-    <p>
-
-      Manylion yn dod yn fuan.
-
-      <br>
-
-      <span class="english">
-        Details coming soon.
-      </span>
-
-    </p>
+    </div>
 
   </div>
 
@@ -635,127 +1190,134 @@
 
 
 
-<!-- ====================================================
+<!-- ==================================================
+     CONCERTS
+     ================================================== -->
+
+<section class="concerts" id="concerts">
+
+  <div class="wrap">
+
+    <div class="concert-top">
+
+      <div>
+
+        <div class="eyebrow">
+          Beth sy'n dod · What's On
+        </div>
+
+        <h2>
+          Cyngherddau
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <!--
+      WHEN YOU HAVE THE NEXT CONCERT,
+      THIS IS THE BLOCK TO EDIT.
+    -->
+
+    <div class="event-card">
+
+      <div class="event-date">
+
+        <svg viewBox="0 0 24 24">
+          <path d="M7 2h2v2h6V2h2v2h2a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h2V2zm12 8H5v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9z"/>
+        </svg>
+
+        <strong>Nesaf</strong>
+        <span>Next concert</span>
+
+      </div>
+
+
+      <div class="event-content">
+
+        <h3>
+          Cyngerdd nesaf / Next concert
+        </h3>
+
+        <p>
+          Manylion yn dod yn fuan · Details coming soon.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
      JOIN US
-     ==================================================== -->
+     ================================================== -->
 
-<section id="join"
-         class="feature">
+<section class="join-section" id="join">
 
-  <div class="feature-inner">
-
-    <h2>
-      Ymunwch â Ni / Join Us
-    </h2>
+  <div class="wrap join-grid">
 
 
-    <p>
-      Mae croeso cynnes i aelodau newydd.
-    </p>
+    <div class="join-copy">
+
+      <div class="eyebrow">
+        Ymunwch â Ni · Join Us
+      </div>
+
+      <h2>
+        Dewch i ganu.
+      </h2>
+
+      <p>
+        Mae croeso cynnes i aelodau newydd. Dewch draw i ymarfer,
+        cwrdd â'r côr a chael blas ar ganu gyda ni.
+      </p>
+
+      <p class="english">
+        New members are always welcome. Come along to a rehearsal,
+        meet the choir and experience singing with us.
+      </p>
+
+    </div>
 
 
-    <p>
-      Rydym yn ymarfer bob nos Iau am 7.30pm.
-    </p>
+    <div class="rehearsal-card">
 
+      <div class="rehearsal-small">
+        Ymarfer · Rehearsal
+      </div>
 
-    <p class="english">
+      <h3>
+        Bob nos Iau<br>
+        Every Thursday
+      </h3>
 
-      New members are always welcome.
+      <div class="rehearsal-detail">
 
-      <br>
+        <strong>7.30pm</strong>
 
-      We rehearse every Thursday evening from 7.30pm.
+        <br><br>
 
-    </p>
-
-
-    <p>
-
-      <strong>
-
-        Neuadd Goronwy Owen
-
-        <br>
-
-        Benllech
-
-        <br>
-
+        Neuadd Goronwy Owen<br>
+        Benllech<br>
         Ynys Môn LL74 8QF
 
-      </strong>
-
-    </p>
+      </div>
 
 
-    <a class="button"
-       href="mailto:meibiongoronwy@gmail.com">
+      <a class="btn btn-primary"
+         href="mailto:meibiongoronwy@gmail.com">
 
-       Cysylltwch â Ni / Contact Us
+        Cysylltwch â Ni / Contact Us
 
-    </a>
+      </a>
 
-  </div>
-
-</section>
-
-
-
-<!-- ====================================================
-     SOCIAL LINKS
-     ==================================================== -->
-
-<section>
-
-  <h2>
-    Dilynwch Ni / Follow Us
-  </h2>
-
-
-  <div class="socials">
-
-
-    <a href="https://www.facebook.com/meibiongoronwy"
-       target="_blank"
-       rel="noopener">
-
-      <i class="fa-brands fa-facebook-f"></i>
-
-      Facebook
-
-    </a>
-
-
-    <a href="https://www.instagram.com/meibion_goronwy/"
-       target="_blank"
-       rel="noopener">
-
-      <i class="fa-brands fa-instagram"></i>
-
-      Instagram
-
-    </a>
-
-
-    <a href="https://www.tiktok.com/@meibion.goronwy"
-       target="_blank"
-       rel="noopener">
-
-      <i class="fa-brands fa-tiktok"></i>
-
-      TikTok
-
-    </a>
-
-
-    <a href="mailto:meibiongoronwy@gmail.com">
-
-      <i class="fa-solid fa-envelope"></i>
-
-      meibiongoronwy@gmail.com
-
-    </a>
+    </div>
 
   </div>
 
@@ -763,19 +1325,129 @@
 
 
 
-<!-- ====================================================
+<!-- ==================================================
+     SOCIALS
+     ================================================== -->
+
+<section class="follow">
+
+  <div class="wrap">
+
+    <div class="follow-heading">
+
+      <div class="eyebrow">
+        Cadwch mewn cysylltiad · Keep in touch
+      </div>
+
+      <h2>
+        Dilynwch y côr.
+      </h2>
+
+    </div>
+
+
+    <div class="social-grid">
+
+
+      <!-- FACEBOOK -->
+
+      <a class="social-card"
+         href="https://www.facebook.com/meibiongoronwy"
+         target="_blank"
+         rel="noopener">
+
+        <svg viewBox="0 0 24 24">
+          <path d="M13.5 22v-9h3l.5-3h-3.5V8.1c0-.9.3-1.6 1.7-1.6H17V3.8c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10H7v3h3v9h3.5z"/>
+        </svg>
+
+        <span>Facebook</span>
+
+      </a>
+
+
+      <!-- INSTAGRAM -->
+
+      <a class="social-card"
+         href="https://www.instagram.com/meibion_goronwy/"
+         target="_blank"
+         rel="noopener">
+
+        <svg viewBox="0 0 24 24">
+          <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm11 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
+        </svg>
+
+        <span>Instagram</span>
+
+      </a>
+
+
+      <!-- TIKTOK -->
+
+      <a class="social-card"
+         href="https://www.tiktok.com/@meibion.goronwy"
+         target="_blank"
+         rel="noopener">
+
+        <svg viewBox="0 0 24 24">
+          <path d="M14 3h3.2c.3 1.5 1.2 2.7 2.8 3.4v3.1c-1.3 0-2.5-.4-3.6-1.1v7.1a6.3 6.3 0 1 1-5.5-6.2v3.2a3.1 3.1 0 1 0 2 3V3H14z"/>
+        </svg>
+
+        <span>TikTok</span>
+
+      </a>
+
+
+      <!-- EMAIL -->
+
+      <a class="social-card"
+         href="mailto:meibiongoronwy@gmail.com">
+
+        <svg viewBox="0 0 24 24">
+          <path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm9 7L3.7 7h16.6L12 12zm0 2.3L3 8.8V17h18V8.8l-9 5.5z"/>
+        </svg>
+
+        <span>Email</span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
      FOOTER
-     ==================================================== -->
+     ================================================== -->
 
 <footer>
 
-  <p>
-    © Côr Meibion Goronwy
-  </p>
+  <div class="wrap footer-inner">
 
-  <p>
-    Benllech · Ynys Môn · Anglesey
-  </p>
+    <div>
+
+      <div class="footer-title">
+        Côr Meibion Goronwy
+      </div>
+
+      <div class="footer-place">
+        Benllech · Ynys Môn · Anglesey
+      </div>
+
+    </div>
+
+
+    <div class="footer-email">
+
+      <a href="mailto:meibiongoronwy@gmail.com">
+        meibiongoronwy@gmail.com
+      </a>
+
+    </div>
+
+  </div>
 
 </footer>
 
