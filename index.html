@@ -9,7 +9,12 @@
   <meta name="description"
         content="Côr Meibion Goronwy – côr meibion o Ynys Môn. Anglesey male voice choir, established in Benllech in 2016.">
 
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
   <style>
+
     * {
       box-sizing: border-box;
     }
@@ -26,200 +31,466 @@
       line-height: 1.6;
     }
 
-    /* ---------- HERO ---------- */
+
+    /* =========================
+       HERO
+       ========================= */
 
     .hero {
       min-height: 72vh;
+
       background:
-        linear-gradient(rgba(0,0,0,.42), rgba(0,0,0,.58)),
+        linear-gradient(rgba(0,0,0,.38), rgba(0,0,0,.60)),
         url("choir.jpg") center/cover no-repeat;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       text-align: center;
       color: white;
-      padding: 40px 20px;
+
+      padding: 100px 20px 50px;
+
+      position: relative;
     }
+
 
     .hero-inner {
       max-width: 900px;
     }
+
 
     .hero h1 {
       font-size: clamp(3rem, 8vw, 6rem);
       line-height: 1;
       margin: 0 0 18px;
       letter-spacing: 1px;
+      text-shadow: 0 3px 12px rgba(0,0,0,.4);
     }
+
 
     .hero p {
       font-size: clamp(1.1rem, 3vw, 1.55rem);
       margin: 0 0 28px;
+      text-shadow: 0 2px 8px rgba(0,0,0,.4);
     }
 
-    /* ---------- BUTTONS ---------- */
+
+    /* =========================
+       SOCIAL ICONS AT TOP
+       ========================= */
+
+    .top-socials {
+      position: absolute;
+
+      top: 22px;
+      right: 24px;
+
+      display: flex;
+      gap: 11px;
+
+      z-index: 10;
+    }
+
+
+    .top-socials a {
+
+      width: 46px;
+      height: 46px;
+
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: white;
+      text-decoration: none;
+
+      font-size: 1.35rem;
+
+      background: rgba(0,0,0,.46);
+
+      border: 1px solid rgba(255,255,255,.42);
+
+      backdrop-filter: blur(5px);
+
+      transition:
+        transform .2s,
+        background .2s;
+    }
+
+
+    .top-socials a:hover {
+      transform: translateY(-3px);
+      background: rgba(255,255,255,.22);
+    }
+
+
+    /* =========================
+       BUTTONS
+       ========================= */
 
     .button {
+
       display: inline-block;
+
       padding: 13px 22px;
+
       margin: 6px;
+
       background: white;
       color: #222;
+
       text-decoration: none;
+
       border-radius: 7px;
+
       font-weight: bold;
+
       transition: .2s;
     }
+
 
     .button:hover {
       transform: translateY(-2px);
       opacity: .9;
     }
 
+
     .button.dark {
       background: #222;
       color: white;
     }
 
-    /* ---------- CONTENT ---------- */
+
+    /* =========================
+       GENERAL CONTENT
+       ========================= */
 
     section {
+
       max-width: 900px;
+
       margin: auto;
+
       padding: 65px 25px;
     }
 
+
     section h2 {
+
       text-align: center;
+
       font-size: 2rem;
+
       margin-top: 0;
       margin-bottom: 35px;
     }
+
 
     .welsh {
       margin-bottom: 28px;
     }
 
+
     .english {
       color: #555;
     }
 
+
     .divider {
+
       width: 70px;
+
       border: 0;
       border-top: 3px solid #222;
+
       margin: 30px auto;
     }
 
-    /* ---------- FEATURE ---------- */
+
+    /* =========================
+       DARK FEATURE SECTIONS
+       ========================= */
 
     .feature {
+
       background: #222;
+
       color: white;
+
       max-width: none;
     }
 
+
     .feature-inner {
+
       max-width: 900px;
+
       margin: auto;
+
       text-align: center;
     }
+
 
     .feature .english {
       color: #ddd;
     }
 
-    /* ---------- EVENTS ---------- */
+
+    /* =========================
+       EVENTS
+       ========================= */
 
     .event {
+
       background: white;
+
       padding: 22px;
+
       margin: 16px 0;
+
       border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,.06);
+
+      box-shadow:
+        0 2px 10px rgba(0,0,0,.06);
     }
 
+
     .event h3 {
+
       margin-top: 0;
+
       margin-bottom: 5px;
     }
 
-    /* ---------- SOCIAL ---------- */
+
+    /* =========================
+       SOCIAL LINKS LOWER PAGE
+       ========================= */
 
     .socials {
+
       text-align: center;
     }
+
 
     .socials a {
-      display: block;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 12px;
+
       max-width: 480px;
+
       margin: 12px auto;
+
       padding: 16px;
+
       background: #222;
+
       color: white;
+
       text-decoration: none;
+
       border-radius: 8px;
+
       font-weight: bold;
+
       font-size: 1.05rem;
+
+      transition: .2s;
     }
+
 
     .socials a:hover {
-      opacity: .85;
+
+      opacity: .88;
+
+      transform: translateY(-2px);
     }
 
-    /* ---------- FOOTER ---------- */
+
+    .socials i {
+
+      width: 25px;
+
+      font-size: 1.35rem;
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
 
     footer {
+
       background: #111;
+
       color: #aaa;
+
       text-align: center;
+
       padding: 35px 20px;
+
       font-size: .9rem;
     }
+
 
     footer a {
       color: white;
     }
 
+
+    /* =========================
+       MOBILE
+       ========================= */
+
     @media (max-width: 600px) {
+
       section {
         padding: 48px 20px;
       }
 
+
       .hero {
         min-height: 65vh;
+        padding-top: 105px;
       }
+
+
+      .top-socials {
+
+        top: 20px;
+
+        left: 50%;
+
+        right: auto;
+
+        transform: translateX(-50%);
+      }
+
+
+      .top-socials a {
+
+        width: 43px;
+
+        height: 43px;
+
+        font-size: 1.25rem;
+      }
+
     }
+
   </style>
+
 </head>
 
 
 <body>
 
-<!-- ===================== HERO ===================== -->
+
+<!-- ====================================================
+     HERO
+     ==================================================== -->
 
 <header class="hero">
+
+
+  <!-- SOCIAL ICONS -->
+
+  <div class="top-socials">
+
+    <a href="https://www.facebook.com/meibiongoronwy"
+       target="_blank"
+       rel="noopener"
+       aria-label="Facebook"
+       title="Facebook">
+
+      <i class="fa-brands fa-facebook-f"></i>
+
+    </a>
+
+
+    <a href="https://www.instagram.com/meibion_goronwy/"
+       target="_blank"
+       rel="noopener"
+       aria-label="Instagram"
+       title="Instagram">
+
+      <i class="fa-brands fa-instagram"></i>
+
+    </a>
+
+
+    <a href="https://www.tiktok.com/@meibion.goronwy"
+       target="_blank"
+       rel="noopener"
+       aria-label="TikTok"
+       title="TikTok">
+
+      <i class="fa-brands fa-tiktok"></i>
+
+    </a>
+
+
+    <a href="mailto:meibiongoronwy@gmail.com"
+       aria-label="Email"
+       title="Email">
+
+      <i class="fa-solid fa-envelope"></i>
+
+    </a>
+
+  </div>
+
+
+
   <div class="hero-inner">
 
     <h1>Côr Meibion Goronwy</h1>
 
     <p>
-      Côr Meibion Ynys Môn<br>
+      Côr Meibion Ynys Môn
+      <br>
       Anglesey Male Voice Choir
     </p>
 
-    <a class="button" href="#about">Amdanom Ni / About Us</a>
-    <a class="button" href="#join">Ymunwch / Join Us</a>
+
+    <a class="button"
+       href="#about">
+
+       Amdanom Ni / About Us
+
+    </a>
+
+
+    <a class="button"
+       href="#join">
+
+       Ymunwch / Join Us
+
+    </a>
 
   </div>
+
 </header>
 
 
-<!-- ===================== ABOUT ===================== -->
+
+<!-- ====================================================
+     ABOUT
+     ==================================================== -->
 
 <section id="about">
 
   <h2>Amdanom Ni / About Us</h2>
+
 
   <div class="welsh">
 
@@ -228,40 +499,46 @@
       gyda'r bwriad o ail-greu diddordeb lleol ym myd y corau meibion.
     </p>
 
+
     <p>
       Ers hynny mae'r côr wedi perfformio ar lwyfannau ledled Gogledd
-      Cymru a thu hwnt, gan gynnwys ymweliadau ag Iwerddon, yr Amwythig
-      a Llundain.
+      Cymru a thu hwnt, gan gynnwys ymweliadau ag Iwerddon,
+      yr Amwythig a Llundain.
     </p>
+
 
     <p>
       Mae ein repertoire yn cynnwys caneuon traddodiadol Cymraeg a
-      Saesneg ynghyd â darnau mwy cyfoes, gydag unawdwyr, deuawdau a
-      thriawdau o blith aelodau'r côr.
+      Saesneg ynghyd â darnau mwy cyfoes, gydag unawdwyr,
+      deuawdau a thriawdau o blith aelodau'r côr.
     </p>
 
   </div>
 
+
   <hr class="divider">
+
 
   <div class="english">
 
     <p>
-      Côr Meibion Goronwy was formed in the village of Benllech in
-      2016 with the aim of renewing local interest in the tradition
-      of male voice singing.
+      Côr Meibion Goronwy was formed in the village of Benllech
+      in 2016 with the aim of renewing local interest in the
+      tradition of male voice singing.
     </p>
 
-    <p>
-      Since then the choir has performed throughout North Wales and
-      further afield, including visits to Ireland, Shrewsbury and
-      London.
-    </p>
 
     <p>
-      Our repertoire ranges from traditional Welsh and English male
-      voice music to more contemporary pieces, with soloists, duets
-      and trios drawn from within the choir.
+      Since then the choir has performed throughout North Wales
+      and further afield, including visits to Ireland,
+      Shrewsbury and London.
+    </p>
+
+
+    <p>
+      Our repertoire ranges from traditional Welsh and English
+      male voice music to more contemporary pieces, with
+      soloists, duets and trios drawn from within the choir.
     </p>
 
   </div>
@@ -269,22 +546,43 @@
 </section>
 
 
-<!-- ===================== PEOPLE ===================== -->
+
+<!-- ====================================================
+     MUSICAL TEAM
+     ==================================================== -->
 
 <section class="feature">
 
   <div class="feature-inner">
 
-    <h2>Ein Tîm Cerddorol / Our Musical Team</h2>
+    <h2>
+      Ein Tîm Cerddorol / Our Musical Team
+    </h2>
+
 
     <p>
-      <strong>Cyfarwyddwr Cerdd / Musical Director</strong><br>
+
+      <strong>
+        Cyfarwyddwr Cerdd / Musical Director
+      </strong>
+
+      <br>
+
       Dafydd Jones
+
     </p>
 
+
     <p>
-      <strong>Cyfeilydd / Accompanist</strong><br>
+
+      <strong>
+        Cyfeilydd / Accompanist
+      </strong>
+
+      <br>
+
       Rhian Lloyd Jones
+
     </p>
 
   </div>
@@ -292,57 +590,110 @@
 </section>
 
 
-<!-- ===================== EVENTS ===================== -->
+
+<!-- ====================================================
+     EVENTS
+     ==================================================== -->
 
 <section id="events">
 
-  <h2>Cyngherddau / Concerts</h2>
+  <h2>
+    Cyngherddau / Concerts
+  </h2>
+
 
   <!--
-       COPY THIS EVENT BLOCK WHEN ADDING A NEW CONCERT
+
+  TO ADD AN EVENT,
+  COPY THIS WHOLE <div class="event"> BLOCK
+
   -->
 
+
   <div class="event">
-    <h3>Cyngerdd nesaf / Next concert</h3>
+
+    <h3>
+      Cyngerdd nesaf / Next concert
+    </h3>
+
+
     <p>
-      Manylion yn dod yn fuan.<br>
-      <span class="english">Details coming soon.</span>
+
+      Manylion yn dod yn fuan.
+
+      <br>
+
+      <span class="english">
+        Details coming soon.
+      </span>
+
     </p>
+
   </div>
 
 </section>
 
 
-<!-- ===================== JOIN ===================== -->
 
-<section id="join" class="feature">
+<!-- ====================================================
+     JOIN US
+     ==================================================== -->
+
+<section id="join"
+         class="feature">
 
   <div class="feature-inner">
 
-    <h2>Ymunwch â Ni / Join Us</h2>
+    <h2>
+      Ymunwch â Ni / Join Us
+    </h2>
+
 
     <p>
       Mae croeso cynnes i aelodau newydd.
     </p>
 
+
     <p>
       Rydym yn ymarfer bob nos Iau am 7.30pm.
     </p>
 
+
     <p class="english">
+
       New members are always welcome.
+
+      <br>
+
       We rehearse every Thursday evening from 7.30pm.
+
     </p>
 
+
     <p>
-      <strong>Neuadd Goronwy Owen<br>
-      Benllech<br>
-      Ynys Môn LL74 8QF</strong>
+
+      <strong>
+
+        Neuadd Goronwy Owen
+
+        <br>
+
+        Benllech
+
+        <br>
+
+        Ynys Môn LL74 8QF
+
+      </strong>
+
     </p>
+
 
     <a class="button"
        href="mailto:meibiongoronwy@gmail.com">
+
        Cysylltwch â Ni / Contact Us
+
     </a>
 
   </div>
@@ -350,31 +701,60 @@
 </section>
 
 
-<!-- ===================== SOCIAL LINKS ===================== -->
+
+<!-- ====================================================
+     SOCIAL LINKS
+     ==================================================== -->
 
 <section>
 
-  <h2>Dilynwch Ni / Follow Us</h2>
+  <h2>
+    Dilynwch Ni / Follow Us
+  </h2>
+
 
   <div class="socials">
 
+
     <a href="https://www.facebook.com/meibiongoronwy"
-       target="_blank" rel="noopener">
-       Facebook
+       target="_blank"
+       rel="noopener">
+
+      <i class="fa-brands fa-facebook-f"></i>
+
+      Facebook
+
     </a>
+
 
     <a href="https://www.instagram.com/meibion_goronwy/"
-       target="_blank" rel="noopener">
-       Instagram
+       target="_blank"
+       rel="noopener">
+
+      <i class="fa-brands fa-instagram"></i>
+
+      Instagram
+
     </a>
+
 
     <a href="https://www.tiktok.com/@meibion.goronwy"
-       target="_blank" rel="noopener">
-       TikTok
+       target="_blank"
+       rel="noopener">
+
+      <i class="fa-brands fa-tiktok"></i>
+
+      TikTok
+
     </a>
 
+
     <a href="mailto:meibiongoronwy@gmail.com">
-       ✉ meibiongoronwy@gmail.com
+
+      <i class="fa-solid fa-envelope"></i>
+
+      meibiongoronwy@gmail.com
+
     </a>
 
   </div>
@@ -382,7 +762,10 @@
 </section>
 
 
-<!-- ===================== FOOTER ===================== -->
+
+<!-- ====================================================
+     FOOTER
+     ==================================================== -->
 
 <footer>
 
@@ -395,6 +778,7 @@
   </p>
 
 </footer>
+
 
 </body>
 </html>
